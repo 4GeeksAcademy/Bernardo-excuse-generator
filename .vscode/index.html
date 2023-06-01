@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Excusa Aleatoria</title>
+  <script>
+    function generarExcusa() {
+      let who = ['El perro', 'Mi abuela', 'Su tortuga', 'Mi pájaro'];
+      let action = ['se comió', 'orinó en', 'aplastó', 'rompió'];
+      let what = ['mi tarea', 'las llaves', 'el coche'];
+      let when = ['antes de la clase', 'justo a tiempo', 'cuando terminé', 'durante mi almuerzo', 'mientras estaba rezando'];
+
+      let randomWho = who[Math.floor(Math.random() * who.length)];
+      let randomAction = action[Math.floor(Math.random() * action.length)];
+      let randomWhat = what[Math.floor(Math.random() * what.length)];
+      let randomWhen = when[Math.floor(Math.random() * when.length)];
+
+      let excusa = randomWho + ' ' + randomAction + ' ' + randomWhat + ' ' + randomWhen;
+      return excusa;
+    }
+
+    window.onload = function() {
+      let excuseElement = document.getElementById('excuse');
+      excuseElement.innerHTML = generarExcusa();
+    };
+  </script>
+</head>
+<body>
+  <p id="excuse">Excusa aleatoria</p>
+</body>
+</html>
